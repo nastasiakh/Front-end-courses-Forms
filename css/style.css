@@ -119,7 +119,7 @@ form{
     -moz-appearance: none;
     appearance:none;
 }
-select{
+.select{
     position: relative;
 }
 .select:after{
@@ -128,7 +128,7 @@ select{
     border-style: solid;
     pointer-events: none;
     position: absolute;
-    top: 21%;
+    top: 34%;
     right: 45%;
 }
 /*.animated{*/
