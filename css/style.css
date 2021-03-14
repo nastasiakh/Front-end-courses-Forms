@@ -79,12 +79,14 @@ form{
     flex-direction: column;
 }
 .info > input{
-    margin-top: 10px;
+    margin: 5px 0;
+    padding-inline-start: 5px;
 }
 .choice{
+    margin: 6px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 5px;
     align-items: flex-start;
 }
 .choice p{
@@ -93,13 +95,43 @@ form{
 .buttons > input + input{
     margin-left:10px  ;
 }
-input[id="input1"]:checked > body{
-    background-image: url(../images/ski.jpg);
+.info input::-webkit-input-placeholder{
+    opacity: 1;
+    color:slategrey;
+    transition: opacity 0.3s ease;
+    padding-left: 5px;
 }
-input[id="input2"]:checked > body{
-    background-image: url(../images/beaches.jpg);
+.info input:focus::-webkit-input-placeholder{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    outline:none;
 }
-.animated{
-    transition-property: background-image;
-    transition-timing-function: ease-in-out;
+.select p {
+    margin: 5px auto;
+    display: block;
 }
+.select select{
+    display: block;
+    width: 100%;
+    background: none;
+    border: 1px solid;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance:none;
+}
+select{
+    position: relative;
+}
+.select:after{
+    content: "";
+    display: block;
+    border-style: solid;
+    pointer-events: none;
+    position: absolute;
+    top: 34%;
+    right: 45%;
+}
+/*.animated{*/
+/*    transition-property: background-image;*/
+/*    transition-timing-function: ease-in-out;*/
+/*}*/
