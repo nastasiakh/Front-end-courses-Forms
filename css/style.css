@@ -104,7 +104,11 @@ form{
 .info input:focus::-webkit-input-placeholder{
     opacity: 0;
     transition: opacity 0.3s ease;
-    outline:none;
+}
+.info input[type="text"]:focus,
+.info input[type="text"]:active{
+    border: none;
+    outline: none;
 }
 .select p {
     margin: 5px auto;
@@ -119,10 +123,10 @@ form{
     -moz-appearance: none;
     appearance:none;
 }
-.select{
+select{
     position: relative;
 }
-.select:after{
+select:after{
     content: "";
     display: block;
     border-style: solid;
@@ -130,6 +134,43 @@ form{
     position: absolute;
     top: 34%;
     right: 45%;
+}
+.nutrition{
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+.nutrition p{
+    margin-bottom: 10px;
+}
+.nutrition input[type="checkbox"]{
+    display: none;
+}
+.nutrition input[type="checkbox"] + label{
+    padding-left: 30px ;
+    margin-left: 20px;
+    position: relative;
+}
+.nutrition input[type="checkbox"] + label:before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 1px solid;
+    top: 0;
+    left: 0;
+}
+.nutrition input[type="checkbox"]:checked + label:after{
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 20px;
+    top: -2px;
+    left: 5px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    transform: rotate(40deg);
 }
 /*.animated{*/
 /*    transition-property: background-image;*/
